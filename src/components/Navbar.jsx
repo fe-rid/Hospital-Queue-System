@@ -12,13 +12,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="patient-nav">
+    <nav className="patient-nav" style={{ position: 'relative' }}>
       <div className="container flex justify-between items-center h-full">
-        <Link to="/patient" className="sidebar-logo p-0">
-          <div className="logo-icon">H</div>
-          <span>SmartHealth</span>
+        
+        {/* Brand Section */}
+        <Link to="/patient" className="sidebar-logo p-0 flex items-center gap-2 no-underline">
+          <div className="logo-icon" style={{ background: '#2563eb', color: 'white', fontWeight: '900', borderRadius: '10px' }}>H</div>
+          <span style={{ color: '#2563eb', fontWeight: '800', fontSize: '1.25rem' }}>SmartHealth</span>
         </Link>
         
+        {/* Navigation Middle */}
         <div className="flex gap-6">
           {navLinks.map(link => {
             const isActive = location.pathname === link.path;
@@ -36,11 +39,15 @@ const Navbar = () => {
           })}
         </div>
 
-        <div>
-          <Link to="/admin/login" className="btn-outline px-4 py-2 text-xs flex items-center gap-2">
-            <Shield size={14} /> Admin Portal
-          </Link>
-        </div>
+        {/* Placeholder for layout balance */}
+        <div style={{ width: '120px' }}></div>
+      </div>
+
+      {/* ADMIN TOP RIGHT ALONE */}
+      <div style={{ position: 'absolute', right: '1.5rem', top: '50%', transform: 'translateY(-50%)' }}>
+        <Link to="/admin/login" className="btn-outline px-4 py-2 text-[10px] uppercase font-bold flex items-center gap-2" style={{ background: 'white', borderRadius: '8px' }}>
+          Admin Portal <Shield size={14} />
+        </Link>
       </div>
     </nav>
   );
