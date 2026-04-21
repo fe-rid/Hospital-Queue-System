@@ -1,17 +1,24 @@
-# React + Vite
+# 🏥 SmartHealth Hospital Queue System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, AI-assisted hospital queue management platform designed for modern healthcare environments.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
+- **AI-Assisted Triage**: Automated priority assignment using patient symptoms.
+- **Admin Command Center**: Centralized management of new requests and live queues.
+- **Doctor Console**: Dedicated interfaces for doctors to call, start, and complete consultations.
+- **Real-time Sync**: Persistent database with MongoDB Atlas for seamless data across sessions.
+- **Modern UI**: Clean, minimalist medical aesthetic using Lucide icons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Frontend**: React, Vite, Lucide React icons.
+- **Backend**: Node.js, Express, Mongoose.
+- **Database**: MongoDB Atlas Cloud.
 
-## React Compiler
+## 🏗️ Getting Started
+1. **Configure Environment**: Set your `MONGO_URI` in `backend/.env`.
+2. **Seed Database**: Run `node backend/seed.js` to populate initial doctor staff.
+3. **Run Platform**:
+   - `npm run dev:all` (starts both frontend and backend concurrently).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Hospital-Queue-System
+---
+*Developed for the SmartHealth Persistence Engine.*
