@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Table from '../../components/Table';
 import { Search, Filter, CheckCircle2, RefreshCw, UserPlus, Users, Wifi, WifiOff, Stethoscope, PhoneCall, CheckSquare } from 'lucide-react';
-import { getQueue, servePatient, getAllDoctors, getAllPatients, assignDoctorToPatient } from '../../services/api';
+import { getQueue, servePatient, getAllDoctors, getAllPatients, assignDoctorToPatient, BASE_URL } from '../../services/api';
 
 // Admin helpers for calling and serving (since we removed doctor portal)
 const adminCallPatient = async (patientId) => {
-  return fetch(`http://localhost:5000/api/queue/call/${patientId}`, { method: 'POST' }).then(r => r.json());
+  return fetch(`${BASE_URL}/queue/call/${patientId}`, { method: 'POST' }).then(r => r.json());
 };
 
 const adminStartConsultation = async (patientId) => {
     // We update status to IN_CONSULTATION
-    return fetch(`http://localhost:5000/api/queue/start/${patientId}`, { method: 'POST' }).then(r => r.json());
+    return fetch(`${BASE_URL}/queue/start/${patientId}`, { method: 'POST' }).then(r => r.json());
 };
 
 const QueueManagement = () => {
